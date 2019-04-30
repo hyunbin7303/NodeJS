@@ -1,31 +1,26 @@
-var stuff = require('./stuff');
-console.log(stuff.counter(['kevin', 'park', 'hihihihi']));
-console.log(stuff.adder(5,6));
-console.log(stuff.adder(stuff.pi, 5));
+var express = require('express');
+var app = express(); // able to access
+
+app.set('view engine', 'ejs');
 
 
 
-var events = require('events');
-var util = require('util');
-var Person = function(name) {
-  this.name = name;
-};
-
-
-
-util.inherits(Person, events.EventEmitter);
-var james = new Person('james');
-var mary = new Person('mary');
-var ryu = new Person('james');
-var people = [james,mary,ryu];
-
-
-people.forEach(function(person){
-  person.on('speak', function(msg){
-    console.log(person.name + ' said: ' + msg);
-  });
+app.get('/', function(req,res){
+    res.sendFile(__dirname + '/index.html');
+});
+app.get('/contact', function(req,res){
+    res.sendFile(__dirname + '/contact.html');
 });
 
-// speak event.
-james.emit('speak', 'yoyoyoyo');
-mary.emit('speak','I am maryyyyyyyyyyyyy');
+
+
+app.get('/profile/:name', function(req,res){
+
+
+  var data = {age: 28, job: 'software engineer'};
+
+  res.render('profile', {person: req.params.name, data:data});
+});
+
+
+app.listen(3000);

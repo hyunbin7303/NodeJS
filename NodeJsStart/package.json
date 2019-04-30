@@ -1,0 +1,21 @@
+{
+  "name": "nodejsstart",
+  "version": "1.0.0",
+  "description": "Package testing app",
+  "main": "App.js",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Kevin",
+    "Park"
+  ],
+  "author": "me",
+  "license": "ISC"
+}
