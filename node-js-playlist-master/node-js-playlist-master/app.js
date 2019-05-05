@@ -7,10 +7,9 @@ app.set('view engine', 'ejs');
 
 
 // static files
-app.use(express.static('./public'));
-
+app.use(express.static('public'));﻿
 // First controllers
-todoController();
+todoController(app);
 
 
 // listen to port
