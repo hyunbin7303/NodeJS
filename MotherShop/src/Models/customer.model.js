@@ -1,8 +1,8 @@
 let mongoose = require('mongoose');
 
 
-const server = 'localhost:3000';
-const database = 'VividlyDB';
+const server = 'localhost:27017';
+const database = 'todoDB';
 
 mongoose.connect(`mongodb://${server}/${database}`,{ useNewUrlParser: true });
 let CustomerSchema = new mongoose.Schema({

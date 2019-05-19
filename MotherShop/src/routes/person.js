@@ -9,7 +9,6 @@ router.get('/person', (req,res) => {
   res.send('You have requested a person ');
 });
 
-
 router.get('/person/:name', function(req,res){
   console.log(req.params.name);
   res.send(`you have requested a person ${req.params.name}`);

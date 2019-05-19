@@ -1,4 +1,4 @@
-let CustomerModel = require('../models/customer.model')
+let CustomerModel = require('../Models/customer.model')
 let express = require('express');
 let router = express.Router();
 
@@ -10,21 +10,84 @@ router.post('/customer', (req,res)=> {
     if(!req.body){
       return res.status(400).send('BAD REQUEST  400');
     }
-//    let user = {
-//      name: 'firstname lastname',
-//      email:'hyunbin7303@gmail.com'
-//    }
-    let model = new CustomerModel(req.body);
+
+    if(!req.body.email){
+
+    }
+
+    let model = new CustomerModel(req.body)
     model.save()
       .then(doc => {
-        if(!doc || doc.lenegth === 0){
-           return res.status(500).send(doc);
+        if(!doc || doc.lenegth === 0)
+        {
+           return res.status(500).send(doc)
         }
-        res.status(201).send(doc);
+        res.status(201).send(doc)
       })
-      .catch(err =>{
+      .catch(err => {
+        console.log(err);
         res.status(500).json(err);
       });
+});
+
+
+
+// Get method -----------------------------------------------
+
+router.get('/customer',(req,res) =>{
+  console.log('get method start.')
+  if(req.query.email){
+    return res.status(400).send("Missing URL parameter : email");
+  }
+
+  CustomerModel.findOne({
+    email: req.query.email
+  })
+  .then(doc=> {
+    res.json(doc)
+  })
+  .catch(err => {
+    res.status(500).json(err)
+  })
+})
+
+
+
+
+// Put method -------------------------------------------------------------
+router.put('/customer',(req,res)=>{
+  console.log('update method start.')
+  if(!req.query.email){
+    return res.status(400).send('Missing URL parameter : email')
+  }
+  CustomerModel.findOneAndUpdate({
+    email: req.query.email
+  }, req.body,{
+    new:true
+  })
+  .then(doc=> {
+    res.json(doc)
+  })
+  .catch(err => {
+    res.status(500).json(err)
+  })
+});
+
+
+router.delete('/customer', (req,res) =>{
+
+  if(!req.query.email){
+    return res.status(400).send('Missing URL parameter : email');
+  }
+  CustomerModel.findOneAndRemove({
+    email: req.query.email
+  })
+    .then(doc => {
+      res.json(doc)
+    })
+    .catch(err => {
+      res.status(500).json(err)
+    })
 });
 
 

@@ -1,4 +1,4 @@
-console.log('hello world');
+console.log('Kevin Portfolio Service');
 
 
 let express = require('express');
@@ -31,5 +31,7 @@ app.use((err, req,res,next) => {
 })
 
 
+app.get('/', (req,res)=>res.send('hello world with Express'));
+
 const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => console.info('server has started on ${PORT}'));
+app.listen(PORT, () => console.info(`server has started on ${PORT}`));

@@ -1,0 +1,20 @@
+<h3><a class="btn btn-secondary" href="/music"><i class="fa fa-plus"></i>New Music</a> MUSIC LIST </h3>
+<table class ="table table-striped">
+    <thead>
+      <tr>
+          <th>Music Title</th>
+          <th>Composer</th>
+          <th>Date</th>
+          <th></th>
+      </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+          <td>{{this.Musictitle}}</td>
+          <td>{{this.Composer}}</td>
+          <td>{{this.date}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
