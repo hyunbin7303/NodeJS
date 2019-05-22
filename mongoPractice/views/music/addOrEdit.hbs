@@ -6,11 +6,15 @@
   <div class="form-group">
     <label>FUll Music </label>
     <input type="text" class="form-control" name="musicTitle" placeholder="Type music Title." value ="{{music.musicTitle}}">
-    <!--  <div class="text-danger">
-      {{music.fullNameError}}
-    </div> -->
   </div>
-
+  <div class="form-group">
+    <label>Composer </label>
+    <input type="text" class="form-control" name="composer" placeholder="Type compuser" value ="{{music.composer}}">
+  </div>
+  <div class="form-group">
+    <label>Date </label>
+    <input type="text" class="form-control" name="date" placeholder="Type Date" value ="{{music.date}}">
+  </div>
   <div class ="form-group">
     <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
     <a class = "btn btn-secondary" href="/music/list"><i class = "fa fa-list-alt"></i> View All </a>

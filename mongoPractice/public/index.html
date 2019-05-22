@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+p.dotted {border-style: dotted;}
+p.dashed {border-style: dashed;}
+p.solid {border-style: solid;}
+p.double {border-style: double;}
+p.groove {border-style: groove;}
+p.ridge {border-style: ridge;}
+p.inset {border-style: inset;}
+p.outset {border-style: outset;}
+p.none {border-style: none;}
+p.hidden {border-style: hidden;}
+p.mix {border-style: dotted dashed solid double;}
+</style>
+<body class="w3-light-grey">
+<div class="w3-content" style="max-width:1400px">
+  <title>KIEVIN PARK BLOG</title>
+</head>
+<header class="w3-container w3-center w3-padding-32">
+  <h1><b>Kevin Park Website</b></h1>
+</header>
+
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">Home</a>
+    <a href="#band" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About me</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Portfolio</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Contact</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+      <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="#" class="w3-bar-item w3-button">My Personal Interest</a>
+        <a href="#" class="w3-bar-item w3-button">My Family</a>
+        <a href="#" class="w3-bar-item w3-button">Others</a>
+      </div>
+    </div>
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
+  <a href="#portfolio" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">portfolio</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+</div>
+
+
+<div class="w3-row">
+  <!-- Blog entries -->
+  <div class="w3-col l8 s12">
+    <!-- Blog entry -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <img src="assets/algorithm.jpg" alt="Nature" style="width:80%">
+      <div class="w3-container">
+        <h3><b>My Blog Explanation</b></h3>
+        <h5>Title description, <span class="w3-opacity">April 20, 2019</span></h5>
+      </div>
+
+      <div class="w3-container">
+        <p>my name is kevin park and blah blah</p>
+        <div class="w3-row">
+          <div class="w3-col m8 s12">
+            <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <!-- Blog entry -->
+    <div class="w3-card-4 w3-margin w3-white">
+    <img src="assets/nodeJS.jpg" alt="Norway" style="width:50%">
+      <div class="w3-container">
+        <h3><b>My first blog - Node JS with mongoDB implementation</b></h3>
+        <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5>
+      </div>
+      <div class="w3-container">
+        <p>description.</p>
+        <div class="w3-row">
+          <div class="w3-col m8 s12">
+            <form action="Employee.html">
+                   <button class="w3-button w3-padding-large w3-white w3-border" type="submit">Click for employee</button>
+            </form>
+            <form action="Music.html">
+                   <button class="w3-button w3-padding-large w3-white w3-border" type="submit">Click for music</button>
+            </form>
+            <form action="uploadFiles.html">
+                   <button class="w3-button w3-padding-large w3-white w3-border" type="submit">Upload File Testing</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!-- END BLOG ENTRIES -->
+  </div>
+  <!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top">
+  <img src="/assets/algorithm.png" style="width:20%">
+    <div class="w3-container w3-white">
+      <h4><b>Hyunbin(keivn) Park</b></h4>
+      <p>kevin park blog. Going to put more stuff in here.</p>
+<iframe width="350" height="300" src="https://www.youtube.com/embed/oV3CReUlJgc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div><hr>
+  <!-- Posts -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Popular Posts</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+        <img src="/assets/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">hehe</span><br>
+        <span>hello</span>
+      </li>
+      <li class="w3-padding-16">
+        <img src="/assets/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">Ipsum</span><br>
+        <span>Praes tinci sed</span>
+      </li>
+    </ul>
+  </div>
+  <hr>
+
+  <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Tags</h4>
+    </div>
+    <div class="w3-container w3-white">
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">programming</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Family</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Games</span>
+    </p>
+    </div>
+  </div>
+</div>
+</div><br />
+</div>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}
+  x[myIndex-1].style.display = "block";
+  setTimeout(carousel, 4000);
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+</body>
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+  <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+</html>

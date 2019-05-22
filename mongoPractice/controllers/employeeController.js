@@ -4,9 +4,7 @@ const mongoose = require('mongoose');
 const Employee = mongoose.model('Employee'); // Employee schema from mongo
 
 
-
 router.get('/', (req,res)=> {
-
   console.log("GET METHOD FOR EMPLYEE CALLed.")
   res.render("employee/addOrEdit", {
     viewTitle: "Insert Employee"
@@ -22,6 +20,13 @@ router.post('/', (req,res)=> {
     else
     updateRecord(req,res);
 })
+
+
+function insertFile(file, res){
+
+}
+
+
 
 function insertRecord(req, res){
   var employee = new Employee();
@@ -46,8 +51,7 @@ function insertRecord(req, res){
     }
   });
 }
-function updateRecord(req, res)
-{
+function updateRecord(req, res){
   Employee.findOneAndUpdate({_id: req.body._id}, req.body, {new : true}, (err, doc)=> {
     if(!err){
       res.redirect('employee/list');
@@ -67,8 +71,6 @@ function updateRecord(req, res)
   });
 
 }
-
-
 router.get('/list' , (req,res) => {
   console.log("Get method for employee")
   Employee.find((err, docs) => {
@@ -82,6 +84,8 @@ router.get('/list' , (req,res) => {
     }
   });
 });
+
+
 
 function handleValidationError(err,body){
   for(field in err.errors)
@@ -98,7 +102,6 @@ function handleValidationError(err,body){
       }
   }
 }
-
 router.get('/:id', (req,res)=>{
   Employee.findById(req.params.id,( err, doc)=>{
     if(!err){
@@ -109,10 +112,6 @@ router.get('/:id', (req,res)=>{
     }
   });
 });
-
-
-
-
 router.get('/delete/:id', (req,res) =>{
   Employee.findByIdAndRemove(req.params .id, (err, doc)=>{
     if(!err){

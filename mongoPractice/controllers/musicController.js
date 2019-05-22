@@ -24,7 +24,7 @@ router.post('/', (req,res)=> {
 
 function insertRecord(req, res){
   var music = new Music();
-  music.musicTitle = req.body.fullName;
+  music.musicTitle = req.body.musicTitle;
   music.composer = req.body.composer;
   music.date = req.body.date;
   music.save((err, doc) => {
@@ -44,8 +44,7 @@ function insertRecord(req, res){
     }
   });
 }
-function updateRecord(req, res)
-{
+function updateRecord(req, res){
   Music.findOneAndUpdate({_id: req.body._id}, req.body, {new : true}, (err, doc)=> {
     if(!err){
       res.redirect('music/list');
@@ -54,8 +53,8 @@ function updateRecord(req, res)
       if(err.name == 'ValidationError'){
         handleValidationError(err, req.body);
         res.render("music/addOrEdit",{
-          viewTitle: "Update MUSICCC",
-          employee: req.body
+          viewTitle: "Update MUSIC",
+          music: req.body
         });
       }
       else{
@@ -69,14 +68,14 @@ function updateRecord(req, res)
 
 router.get('/list' , (req,res) => {
   console.log("Get method for music")
-  Employee.find((err, docs) => {
+  Music.find((err, docs) => {
     if(!err){
       res.render("music/list", {
         list: docs
       })
 
     }else{
-      console.log('ERROR in retrieving employee lilst : ' + err);
+      console.log('ERROR in retrieving music list : ' + err);
     }
   });
 });

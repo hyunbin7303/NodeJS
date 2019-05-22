@@ -15,6 +15,11 @@ app.use((req,res,next)=> {
   next();
 });
 
+app.get('/', function (req, res) {
+    res.send('<html><body><h1>Hello World</h1></body></html>');
+});
+
+
 app.use(personRoute);
 app.use(customerRoute);
 app.use(express.static('public'));
@@ -31,7 +36,10 @@ app.use((err, req,res,next) => {
 })
 
 
-app.get('/', (req,res)=>res.send('hello world with Express'));
+app.get('/', (req,res)=>{
+  console.log("GET METHOD ENTER.")
+  res.send('hello world with Express')
+});
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.info(`server has started on ${PORT}`));

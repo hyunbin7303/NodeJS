@@ -4,13 +4,15 @@
   "description": "Practicing mongo db database.",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.0",
+    "express-fileupload": "^1.1.4",
     "express-handlebars": "^3.1.0",
     "mongoose": "^5.5.9"
   }
