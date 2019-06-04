@@ -3,16 +3,21 @@ var router = express.Router();
 const mongoose = require('mongoose');
 const Employee = mongoose.model('Employee'); // Employee schema from mongo
 
-
 router.get('/', (req,res)=> {
-  console.log("GET METHOD FOR EMPLYEE CALLed.")
+  console.log("GET METHOD FOR employee Called.")
   res.render("employee/addOrEdit", {
     viewTitle: "Insert Employee"
   });
 });
 
-
-
+// Need to display detail information in here.
+router.get('/list/:name', function(req,res){
+  console.log(req.params.name);
+  res.render("employee/display", {
+    viewTitle: "Display information"
+  });
+//  res.render('home', {layout: 'default', template: 'home-template'});
+});
 router.post('/', (req,res)=> {
   console.log(req.body);
   if(req.body._id == '')
@@ -20,13 +25,39 @@ router.post('/', (req,res)=> {
     else
     updateRecord(req,res);
 })
+router.get('/list' , (req,res) => {
+  console.log("Get method for employee")
+  Employee.find((err, docs) => {
+    if(!err){
+      res.render("employee/list", {
+        list: docs
+      })
 
-
-function insertFile(file, res){
-
-}
-
-
+    }else{
+      console.log('ERROR in retrieving employee list : ' + err);
+    }
+  });
+});
+router.get('/:id', (req,res)=>{
+  Employee.findById(req.params.id,( err, doc)=>{
+    if(!err){
+      res.render("employee/addOrEdit", {
+        viewTitle: "Update Employee",
+        employee: doc
+      });
+    }
+  });
+});
+router.get('/delete/:id', (req,res) =>{
+  Employee.findByIdAndRemove(req.params .id, (err, doc)=>{
+    if(!err){
+      res.redirect('/employee/list');
+    }
+    else{
+      console.log("Error for deleting :" + err);
+    }
+  });
+})
 
 function insertRecord(req, res){
   var employee = new Employee();
@@ -71,22 +102,6 @@ function updateRecord(req, res){
   });
 
 }
-router.get('/list' , (req,res) => {
-  console.log("Get method for employee")
-  Employee.find((err, docs) => {
-    if(!err){
-      res.render("employee/list", {
-        list: docs
-      })
-
-    }else{
-      console.log('ERROR in retrieving employee lilst : ' + err);
-    }
-  });
-});
-
-
-
 function handleValidationError(err,body){
   for(field in err.errors)
   {
@@ -102,25 +117,7 @@ function handleValidationError(err,body){
       }
   }
 }
-router.get('/:id', (req,res)=>{
-  Employee.findById(req.params.id,( err, doc)=>{
-    if(!err){
-      res.render("employee/addOrEdit", {
-        viewTitle: "Update Employee",
-        employee: doc
-      });
-    }
-  });
-});
-router.get('/delete/:id', (req,res) =>{
-  Employee.findByIdAndRemove(req.params .id, (err, doc)=>{
-    if(!err){
-      res.redirect('/employee/list');
-    }
-    else{
-      console.log("Error for deleting :" + err);
-    }
-  });
-})
+function insertFile(file, res){
 
+}
 module.exports = router;

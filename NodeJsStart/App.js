@@ -10,6 +10,7 @@ app.get('/', function(req,res){
     res.render('index');
 });
 app.get('/contact', function(req,res){
+    console.log("kevin " + req.body);
     res.render('contact', {qs:req.query});
 });
 app.post('/contact', UrlencodedParser, function(req,res){

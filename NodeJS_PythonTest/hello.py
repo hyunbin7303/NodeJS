@@ -26,7 +26,7 @@ N = 5
 arr = [0 for i in range(N)]
 print(arr)
 
-plt.plot([1, 2, 3, 4])
+plt.plot([5, 2, 3, 4])
 plt.ylabel('some numbers')
 plt.show()
 
