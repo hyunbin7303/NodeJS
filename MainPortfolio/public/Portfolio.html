@@ -9,6 +9,37 @@
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
+.content-footer {
+  margin: 150px 0;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #000000;
+  text-decoration: none;
+}
+.social > li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.content-footer > p {
+  color: #F7EDE1;
+}
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #F1C863;
+}
+
+@media only screen and (max-width: 500px) {
+    .masthead {
+        padding: 5em 0;
+    }
+    .masthead-heading {
+        font-size: 5em;
+    }
+    .content-footer {
+        padding: 3em 4em;
+  }
+}
 </style>
 <body>
 
@@ -16,7 +47,7 @@ body {font-family: "Lato", sans-serif}
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="http://127.0.0.1:3000/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="Contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About Me</a>
     <a href="Portfolio.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Portfolio</a>
     <div class="w3-dropdown-hover w3-hide-small">
@@ -41,14 +72,21 @@ body {font-family: "Lato", sans-serif}
       <p class="w3-opacity w3-center"><i>Kevin Park</i></p><br>
       <div class="w3-row-padding w3-padding-35" style="margin:0 -18px">
         <div class="w3-third w3-margin-bottom">
-          <img src="assets/algorithm.jpg" alt="Capstone" style="width:100%" height="100%" class="w3-hover-opacity">
+          <img src="assets/farmfield.jpg" alt="Capstone" style="width:100%" height="150" class="w3-hover-opacity">
           <div class="w3-container w3-white">
             <p><b>Capstone Project - TERRA</b></p>
             <p class="w3-opacity">18 April 2019</p>
             <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('CapstoneModal').style.display='block'">More Detail</button>
           </div>
         </div>
-
+        <div class="w3-third w3-margin-bottom">
+          <img src="assets/EMS.png" alt="San Francisco" style="width:100%" height="150" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>EMS system with RESTful</b></p>
+            <p class="w3-opacity">23 April 2019</p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="window.location.href='https://www.youtube.com/watch?v=DC0ncEKxwYQ'">More Detail</button>
+          </div>
+        </div>
         <div class="w3-third w3-margin-bottom">
           <img src="assets/nodeJS.jpg" alt="San Francisco" style="width:100%" height="150" class="w3-hover-opacity">
           <div class="w3-container w3-white">
@@ -60,30 +98,30 @@ body {font-family: "Lato", sans-serif}
       </div>
       <div class="w3-row-padding w3-padding-35" style="margin:0 -18px">
         <div class="w3-third w3-margin-bottom">
-          <img src="assets/nodeJS.jpg" alt="CPP" style="width:100%" class="w3-hover-opacity">
+          <img src="assets/DirectX.jpg" alt="CPP" style="width:100%" height="150" class="w3-hover-opacity">
           <div class="w3-container w3-white">
             <p><b>DirectX</b></p>
-            <p class="w3-opacity">23 May 2019</p>
-            <p>HAHHAHAHAAHAH</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="window.location.href='CPP.html'">More Detail</button>
+            <p class="w3-opacity">Temporary stop</p>
+            <p></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="window.location.href='https://github.com/hyunbin7303/MyGameStudy'">More Detail</button>
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
-          <img src="assets/nodeJS.jpg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <img src="assets/Conestoga.png" alt="CPP" style="width:100%" height="150" class="w3-hover-opacity">
           <div class="w3-container w3-white">
-            <p><b>EMS system with RESTful</b></p>
-            <p class="w3-opacity">23 April 2019</p>
-            <p>HAHHAHAHAAHAH</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="window.location.href='CPP.html'">More Detail</button>
+            <p><b>Conestoga AR Project</b></p>
+            <p class="w3-opacity">April 18, 2019</p>
+            <p>Click <a href="https://www.youtube.com/watch?v=gPT5NgJzX5w" style="color:black">Here to see demo.</a></p>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="window.location.href='https://github.com/hyunbin7303/Conestoga-AR'">More Detail</button>
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
-          <img src="assets/nodeJS.jpg" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <img src="assets/Hyunbin.jpg" alt="San Francisco" style="width:100%" height="150" class="w3-hover-opacity">
           <div class="w3-container w3-white">
             <p><b>Happiness Project</b></p>
-            <p class="w3-opacity">23 May 2019</p>
-            <p>HAHHAHAHAAHAH</p>
-            <button class="w3-button w3-black w3-margin-bottom" onclick="window.location.href='CPP.html'">More Detail</button>
+            <p class="w3-opacity">On Progress</p>
+            <a href="https://github.com/hyunbin7303/HappinessProject" style="color:black">Click here for Github link.</a>
+            <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('HappinessProjectModal').style.display='block'">More Detail</button>
           </div>
         </div>
       </div>
@@ -97,30 +135,77 @@ body {font-family: "Lato", sans-serif}
 
   <ul class="w3-ul w3-border w3-white w3-text-grey">
     <li class="w3-padding">Happiness Project <span class="w3-tag w3-red w3-margin-left">On Progress</span></li>
-    <li class="w3-padding">MongoDB Studying <span class="w3-tag w3-red w3-margin-left">On Proress</span></li>
-    <li class="w3-padding">....  <span class="w3-badge w3-right w3-margin-right">1 </span></li>
+<!--    <li class="w3-padding">MongoDB Studying <span class="w3-tag w3-red w3-margin-left">On Proress</span></li>-->
+<!--    <li class="w3-padding">....  <span class="w3-badge w3-right w3-margin-right">1 </span></li>-->
   </ul>
 
 
   <div id="CapstoneModal" class="w3-modal">
     <div class="w3-modal-content w3-animate-top w3-card-4">
       <header class="w3-container w3-green w3-center w3-padding-20">
-        <span onclick="document.getElementById('CapstoneModal').style.display='none'"
-       class="w3-button w3-green w3-Large w3-display-topright">×</span>
+        <span onclick="document.getElementById('CapstoneModal').style.display='none'" class="w3-button w3-green w3-Large w3-display-topright">×</span>
           <h2 class="w3-wide">Capstone Project - TERRA</h2>
       </header>
       <div class="w3-container">
         <h3><i class="fa fa-newspaper-o" aria-hidden="true"></i> Description</h3>
         <p>TERRA shall allow the user to keep track of their fields while looking at specific details pertaining to each field. The system shall have the ability to track field details such as: yield, seeds planted, fertilizer use, pesticide use, and other details that may come to light as progress is made. We shall have the ability to visualize Nasa’s Earth Data overtop of the users fields to give them information about the quality of their field overtime. We shall give the user potential solutions to help improve their field quality based on the information gathered and given by the user.</p>
         <h3><i class="fa fa-bars" aria-hidden="true"></i> Features</h3>
-        <article>
-        <!--      <img style="float: left; margin: 15px 15px 15px 0px;" src="assets/BBoying.jpg" width="100" />-->
-        </article>
         <ul>
           <li>Field Data Visualization</li>
           <li>Storing Field Data</li>
           <li>Field Details (Total Acres)</li>
           <li>Field Simulation</li>
+        </ul>
+        <hr />
+        <h3><i class="fa gear" aria-hidden="true"></i> Features</h3>
+        <ul>
+          <li>Frontend - React, Map GL(JS)</li>
+          <li>Backend  - ASP.NET Core web service, Python</li>
+          <li>Database - PostgreSQL</li>
+        </ul>
+        <p>
+          If you want more information, contact to hyunbin7303@gmail.com.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="HappinessProjectModal" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+      <header class="w3-container w3-green w3-center w3-padding-20">
+        <span onclick="document.getElementById('HappinessProjectModal').style.display='none'"
+       class="w3-button w3-green w3-Large w3-display-topright">×</span>
+          <h2 class="w3-wide">Happiness Project</h2>
+      </header>
+      <div class="w3-container">
+        <h3><i class="fa fa-newspaper-o" aria-hidden="true"></i> Objective</h3>
+        This project is a skill track application aimed to increase self-esteem, enhance self development and daily living with a sense of accomplishing the goals the user has made for themselves. By tracking the skills the user wants to accomplish,
+        the user will be able to see the progression they have made over a period of time as well as have a timeline to complete that certain skill.
+        <h3><i class="fa fa-bars" aria-hidden="true"></i> Purpose of Application</h3>
+        <ul>
+          <li>Asset people to self-evaluate themselves.</li>
+          <li>Specify daily To-Do list and interactively recognize their overall work.</li>
+          <li>Enable people to be consistent.</li>
+          <li>Help people to actively(consciousnessly) choose their actions.</li>
+          <li>Motivate people to improve themselves by using gamification concept.</li>
+          <li>Prioritize tasks to help them to identify which task is more value.</li>
+        </ul>
+        <h3><i class="fa fa-bars" aria-hidden="true"></i> Needs of Application</h3>
+        <ul>
+          <li>Giving the individual a space to track their progress without having to compare themselves to others.</li>
+          <li>Provide people a strctured task list for those who have a hard time concentrating on their work/tasks.</li>
+          <li>Give people the push who have plans, but do not have strong desire to put it in action.</li>
+          <li>Poeple who are easily distrcted with social media.</li>
+          <li>Guid people who have a problem with distinguishing what is valuable within their life.</li>
+        </ul>
+        <h3><i class="fa fa-bars" aria-hidden="true"></i> Project outcomes</h3>
+        <ul>
+            <li><strong>Self-Evaluation</strong> - Estimate their current limitation and define what they are able to do at the current time.</li>
+            <li><strong>Motivation</strong> - Encourage themselves to improvee their lifestyle by accomplishing the goals set.</li>
+            <li><strong>Consistency</strong> - Be consistent on their daily goals.</li>
+            <li><strong>Priority</strong> - Identify what goas are urgent and important in their life.</li>
+            <li><strong>Self-Esteem</strong> - Increase self-esteem by achieving and accomplishing goals.</li>
         </ul>
         <hr />
 
@@ -132,9 +217,13 @@ body {font-family: "Lato", sans-serif}
     </div>
   </div>
 
-<!-- End Page Content -->
 </div>
-
+<footer class="content-footer">
+    <ul class="social">
+        <li><a class="css-is-deranged" href="https://github.com/hyunbin7303/">GitHub</a></li>
+        <li><a class="css-is-deranged" href="https://www.linkedin.com/in/hyunbin7303/">Linkedin</a></li>
+    </ul>
+</footer>
 
 <script>
 // Automatic Slideshow - change image every 4 seconds
@@ -178,7 +267,12 @@ window.onclick = function(event) {
     capstone.style.display = "none";
   }
 }
-
+var happinessproject = document.getElementById('HappinessProjectModal');
+window.onclick = function(event) {
+  if(event.target == happinessproject){
+    happinessproject.style.display = "none";
+  }
+}
 </script>
 
 </body>

@@ -1,16 +1,20 @@
 console.log('Server Start.')
 require('./models/db');
-
-const express = require('Express');
+console.log('Server Start2.')
+const express = require("express");
+console.log('Server Start3.')
 const path = require('path');
+console.log('Server Start4.')
 const exphbs = require('express-handlebars');
 const bodyparser = require('body-parser');
 const fileupload = require('express-fileupload');
 const fs = require('fs');
+
+
 const mongodb = require('mongodb');
 const binary = mongodb.Binary;
 
-
+console.log('Server Start5.')
 const homeController = require('./controllers/homeController');
 const employeeController = require('./controllers/employeeController');
 const musicController = require('./controllers/musicController');

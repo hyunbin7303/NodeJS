@@ -9,6 +9,36 @@
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
+.content-footer {
+  margin: 150px 0;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #000000;
+  text-decoration: none;
+}
+.social > li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.content-footer > p {
+  color: #F7EDE1;
+}
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #F1C863;
+}
+@media only screen and (max-width: 500px) {
+    .masthead {
+        padding: 5em 0;
+    }
+    .masthead-heading {
+        font-size: 5em;
+    }
+    .content-footer {
+        padding: 3em 4em;
+  }
+}
 </style>
 <body>
 
@@ -16,15 +46,15 @@ body {font-family: "Lato", sans-serif}
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="http://127.0.0.1:3000/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="Contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About Me</a>
     <a href="Portfolio.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Portfolio</a>
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">My Personal Interest</a>
-        <a href="#" class="w3-bar-item w3-button">My life</a>
-        <a href="#" class="w3-bar-item w3-button">Others</a>
+        <a href="MyPersonal.html" class="w3-bar-item w3-button">My Personal Interest</a>
+        <a href="Life.html" class="w3-bar-item w3-button">My life</a>
+        <a href="Others.html" class="w3-bar-item w3-button">Others</a>
       </div>
     </div>
     <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
@@ -54,6 +84,14 @@ body {font-family: "Lato", sans-serif}
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
+          <img src="assets/Karaoke.jpg" alt="San Francisco" style="width:100%" height="150" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Karaoke</b></p>
+
+            <button class="w3-button w3-black w3-margin-bottom" onclick="window.location.href = '';">Future Function</button>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
           <img src="assets/League.jpg" alt="San Francisco" style="width:100%" height="150" class="w3-hover-opacity">
           <div class="w3-container w3-white">
             <p><b>Playing League</b></p>
@@ -63,6 +101,8 @@ body {font-family: "Lato", sans-serif}
             <button class="w3-button w3-black w3-margin-bottom" onclick="window.location.href = 'https://na.op.gg/summoner/userName=lets';">My Detail</button>
           </div>
         </div>
+
+
       </div>
     </div>
   </div>
@@ -93,7 +133,12 @@ body {font-family: "Lato", sans-serif}
 
 <!-- End Page Content -->
 </div>
-
+<footer class="content-footer">
+    <ul class="social">
+        <li><a class="css-is-deranged" href="https://github.com/hyunbin7303/">GitHub</a></li>
+        <li><a class="css-is-deranged" href="https://www.linkedin.com/in/hyunbin7303/">Linkedin</a></li>
+    </ul>
+</footer>
 
 <script>
 // Automatic Slideshow - change image every 4 seconds

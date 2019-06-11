@@ -44,20 +44,36 @@ a {
 #panel, #flip {
   padding: 3px;
   text-align: left;
+  margin-left: 14px;
+  margin-right: 14px;
   background-color: #9b9d95;
   border: solid 1px #c3c3c3;
 }
 #panel {
-  padding: 50px;
+  padding: 35px;
   display: none;
 }
 #panel2, #flip2 {
   padding: 3px;
+  margin-left: 14px;
+  margin-right: 14px;
   text-align: left;
   background-color: #9b9d95;
   border: solid 1px #c3c3c3;
 }
 #panel2 {
+  padding: 50px;
+  display: none;
+}
+#panel3, #flip3 {
+  padding: 3px;
+  margin-left: 14px;
+  margin-right: 14px;
+  text-align: left;
+  background-color: #9b9d95;
+  border: solid 1px #c3c3c3;
+}
+#panel3 {
   padding: 50px;
   display: none;
 }
@@ -68,15 +84,15 @@ a {
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="http://127.0.0.1:3000/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="Contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About Me</a>
     <a href="Portfolio.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Portfolio</a>
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="#" class="w3-bar-item w3-button">My Personal Interest</a>
-        <a href="#" class="w3-bar-item w3-button">My life</a>
-        <a href="#" class="w3-bar-item w3-button">Others</a>
+        <a href="MyPersonal.html" class="w3-bar-item w3-button">My Personal Interest</a>
+        <a href="Life.html" class="w3-bar-item w3-button">My life</a>
+        <a href="Others.html" class="w3-bar-item w3-button">Others</a>
       </div>
     </div>
     <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
@@ -103,10 +119,9 @@ a {
 
     </div>
   </div>
-  <section class="introduction-section">
+  <section class="w3-container w3-margin w3-black">
       <h1>Introduction</h1>
-      <p>I am a recent graudate software engineer student..</p>
-      <p>I enjoy being challenged and engaging with various projects.</p>
+      <p style="font-size:22px;">Software Engineering Technology graduated developer with an avid interest in the Objective oriented pattern programming, who brings potent communication skills and a professional, collaborative manner to the workplace. A self-learner who enjoys working in a team to deliver consistent, well-designed solutions that meet or exceed customer requirements.</p>
   </section>
   <!-- Ticket Modal -->
   <div id="ticketModal" class="w3-modal">
@@ -130,19 +145,27 @@ a {
 <!-- End Page Content -->
 </div>
 <div id="flip" style="color:black;font-size:22px;"><strong>Conestoga College</strong></div>
-<div id="panel">
+<div id="panel" style="font-size:18px;">
 Graduated Software Engineeering Technology program (3rd), Advanced Diploma</br>
+SET, which is Software Engineering technology, is suited for someone seeking a dynamic career with continually changing software field. Throughout SET course, I've learn how to work with a different programming languages and how to cooperate with teams. Needless to say, I've learned many software engineering fundamental for software development such as drawing diagrams, SRS documentation, agile methodology, and unit testing etc.
 </div>
 <div id="flip2" style="color:black;font-size:22px;"><strong>Contact information</strong></div>
-<div id="panel2">
-Hyunbin Park </br>
-Phone : 519-721-5349 </br>
-Email : hyunbin7303@gmail.com </br>
+<div id="panel2" style="font-size:18px;">
+<ul style="list-style-type:square;">
+  <li>Phone : 519-721-5349 </li>
+  <li>Email : hyunbin7303@gmail.com </li>
+  <li>Addr  : 72 Pinnacle Dr. Kitchener, ON N2P 1C5 </li>
+</ul>
 </div>
 
 <div id="flip3" style="color:black;font-size:25px;"><strong>Skills</strong></div>
-<div id="panel3">
-
+<div id="panel3" style="font-size:18px;">
+  <ul style="list-style-type:square;">
+  <li>Languages : C/C++, C#(WinForm, WPF, ASP.NET MVC, ASP.NET webservice), Java, Shell Script.</li>
+  <li>Web-based Technology : HTML5, CSS, Javascript, JQuery, AJax, NodeJS, MapGL(JS), Ruby On Rails</li>
+  <li>Framework/Engines : OpenGL, DirectX 11 2D, DirectX 11 3D, Android Studio, Unity, Unreal Engine.</li>
+  <li>Database : MS SQL, MySQL, PostgreSQL, SQLlite, MongoDB</li>
+</ul>
 </div>
 
 
