@@ -6,6 +6,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
 <style>
 body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
@@ -84,27 +85,19 @@ a {
 <div class="w3-top">
   <div class="w3-bar w3-black w3-card">
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="Contact.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About Me</a>
-    <a href="Portfolio.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Portfolio</a>
+    <a href="/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="/home/contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About Me</a>
+    <a href="/home/PortFolio" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Portfolio</a>
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="MyPersonal.html" class="w3-bar-item w3-button">My Personal Interest</a>
-        <a href="Life.html" class="w3-bar-item w3-button">My life</a>
-        <a href="Others.html" class="w3-bar-item w3-button">Others</a>
+        <a href="/home/MyPersonal" class="w3-bar-item w3-button">My Personal Interest</a>
+        <a href="/home/life" class="w3-bar-item w3-button">My life</a>
+        <a href="/home/Others" class="w3-bar-item w3-button">Others</a>
       </div>
     </div>
     <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
   </div>
-</div>
-
-<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="#band" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BAND</a>
-  <a href="#tour" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TOUR</a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
 </div>
 
 <!-- Page content -->
@@ -119,37 +112,18 @@ a {
 
     </div>
   </div>
-  <section class="w3-container w3-margin w3-black">
+  <section class="w3-container w3-margin w3-black w3-padding-32">
       <h1>Introduction</h1>
       <p style="font-size:22px;">Software Engineering Technology graduated developer with an avid interest in the Objective oriented pattern programming, who brings potent communication skills and a professional, collaborative manner to the workplace. A self-learner who enjoys working in a team to deliver consistent, well-designed solutions that meet or exceed customer requirements.</p>
   </section>
-  <!-- Ticket Modal -->
-  <div id="ticketModal" class="w3-modal">
-    <div class="w3-modal-content w3-animate-top w3-card-4">
-      <header class="w3-container w3-teal w3-center w3-padding-32">
-        <span onclick="document.getElementById('ticketModal').style.display='none'"
-       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
-        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
-      </header>
-      <div class="w3-container">
-        <p><label><i class="fa fa-shopping-cart"></i>sdlksaflksnlkds</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="How many?">
-        <p><label><i class="fa fa-user"></i> Send To</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="Enter email">
-        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
-        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
-      </div>
-    </div>
-  </div>
-<!-- End Page Content -->
+
 </div>
-<div id="flip" style="color:black;font-size:22px;"><strong>Conestoga College</strong></div>
+<div id="flip" style="color:black;font-size:22px;" class="w3-container w3-padding-32"><strong>Conestoga College</strong></div>
 <div id="panel" style="font-size:18px;">
 Graduated Software Engineeering Technology program (3rd), Advanced Diploma</br>
 SET, which is Software Engineering technology, is suited for someone seeking a dynamic career with continually changing software field. Throughout SET course, I've learn how to work with a different programming languages and how to cooperate with teams. Needless to say, I've learned many software engineering fundamental for software development such as drawing diagrams, SRS documentation, agile methodology, and unit testing etc.
 </div>
-<div id="flip2" style="color:black;font-size:22px;"><strong>Contact information</strong></div>
+<div id="flip2" style="color:black;font-size:22px;" class="w3-container w3-padding-32"><strong>Contact information</strong></div>
 <div id="panel2" style="font-size:18px;">
 <ul style="list-style-type:square;">
   <li>Phone : 519-721-5349 </li>
@@ -158,7 +132,7 @@ SET, which is Software Engineering technology, is suited for someone seeking a d
 </ul>
 </div>
 
-<div id="flip3" style="color:black;font-size:25px;"><strong>Skills</strong></div>
+<div id="flip3" style="color:black;font-size:25px;" class="w3-container w3-padding-32"><strong>Skills</strong></div>
 <div id="panel3" style="font-size:18px;">
   <ul style="list-style-type:square;">
   <li>Languages : C/C++, C#(WinForm, WPF, ASP.NET MVC, ASP.NET webservice), Java, Shell Script.</li>

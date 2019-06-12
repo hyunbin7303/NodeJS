@@ -1,4 +1,47 @@
-
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+.content-footer {
+  margin: 150px 0;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #000000;
+  text-decoration: none;
+}
+.social > li {
+  display: inline-block;
+  margin: 0 5px;
+}
+.content-footer > p {
+  color: #F7EDE1;
+}
+a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #F1C863;
+}
+@media only screen and (max-width: 500px) {
+    .masthead {
+        padding: 5em 0;
+    }
+    .masthead-heading {
+        font-size: 5em;
+    }
+    .content-footer {
+        padding: 3em 4em;
+  }
+}
+#panel, #flip {
+  padding: 3px;
+  text-align: left;
+  margin-left: 14px;
+  margin-right: 14px;
+  background-color: #9b9d95;
+  border: solid 1px #c3c3c3;
+}
+#panel {
+  padding: 35px;
+  display: none;
+}
 .button {
   background-color: #4CAF50; /* Green */
   border: none;

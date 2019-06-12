@@ -6,6 +6,7 @@ mongoose.connect('mongodb://localhost:27017/EmployeeDB', {useNewUrlParser: true}
   else { console.log('ERROR in DB Connection : ' + err)}
 });
 
+require('./daily.model');
 require('./home.model');
 require('./employee.model');
 require('./music.model');

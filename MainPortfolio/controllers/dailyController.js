@@ -1,20 +1,19 @@
 const express = require('express');
 var router = express.Router();
+const path = require('path');
 const mongoose = require('mongoose');
-const Music = mongoose.model('Music'); // Music schema from mongo
+const Daily = mongoose.model('Daily'); // Article schema from mongo
 
-
-
-router.get('/', (req,res)=> {
-  console.log("Calling Music get method called.")
-  res.render("music/addOrEdit", {
-    viewTitle: "Insert Music"
-  });
+router.get('/', (req, res) => {
+  console.log("Calling Daily add page.");
+ // res.sendFile(path.join(__dirname +'/../public/addDaily.html'));
+ res.sendFile(path.join(__dirname +'/../public/Portfolio.html'));
+ 
 });
-router.get('/' , (req,res) => {
-  res.sendFile(path.join(__dirname +'/../public/Contact.html'));
-});
-
+router.post('/daily_create', (req, res) => {
+  console.log("Daily Life Create. ");
+  
+})
 
 router.post('/', (req,res)=> {
   console.log(req.body);
@@ -66,16 +65,13 @@ function updateRecord(req, res){
   });
 
 }
-
-
 router.get('/list' , (req,res) => {
   console.log("Get method for music")
   Music.find((err, docs) => {
     if(!err){
-      res.render("music/list", {
+      res.render("daily/list", {
         list: docs
       })
-
     }else{
       console.log('ERROR in retrieving music list : ' + err);
     }
@@ -85,8 +81,8 @@ function handleValidationError(err,body){
   for(field in err.errors)
   {
       switch (err.errors[field].path) {
-        case 'musicTitle':
-          body['musicTitleError'] = err.errors[field].message;
+        case 'dailtTitle':
+          body['dailyTitleError'] = err.errors[field].message;
           break;
         case 'composer':
           body['composerError'] = err.errors[field].message;
@@ -96,16 +92,4 @@ function handleValidationError(err,body){
       }
   }
 }
-
-router.get('/:id', (req,res)=>{
-  Music.findById(req.params.id,( err, doc)=>{
-    if(!err){
-      res.render("music/addOrEdit", {
-        viewTitle: "Update Music",
-        emplo: doc
-      });
-    }
-  });
-});
-
 module.exports = router;
