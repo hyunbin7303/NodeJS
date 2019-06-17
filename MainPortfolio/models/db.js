@@ -1,6 +1,9 @@
 const mongoose = require('mongoose');
 console.log("mongoDB connection checking.");
-mongoose.connect('mongodb://localhost:27017/EmployeeDB', {useNewUrlParser: true}, (err)=> {
+const uri = "mongodb+srv://hyunbin7303:asdf1234@cluster0-bvirm.mongodb.net/test";
+
+
+mongoose.connect(uri, {useNewUrlParser: true}, (err)=> {
 
   if(!err) { console.log('MonggoDB Connection succeeded')}
   else { console.log('ERROR in DB Connection : ' + err)}

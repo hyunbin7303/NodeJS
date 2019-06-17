@@ -1,0 +1,25 @@
+<h3>My Daily Life Information</h3>
+<a class="btn btn-secondary" href="/daily"><i class="fa fa-plus"></i>Create New</a>
+<table class ="table table-striped">
+    <thead>
+      <tr>
+          <th>Title </th>
+          <th>Date </th>
+          <th>Content </th>
+          <th></th>
+      </tr>
+    </thead>
+    <tbody>
+        {{#each list}}
+        <tr>
+          <td>{{this.title}}</td>
+          <td>{{this.date}}</td>
+          <td>{{this.content}}</td>
+          <td>
+              <a href="/daily/{{this._id}}"><i class="fa fa-pencil fa-lg" aria-hidden="true"></i></a>
+              <a href="/daily/delete/{{this._id}}" onclick="return confirm('Are you really want to delete?');"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+          </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

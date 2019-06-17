@@ -4,67 +4,67 @@ const path = require('path');
 const mongoose = require('mongoose');
 const Daily = mongoose.model('Daily'); // Article schema from mongo
 
+
+
+
 router.get('/', (req, res) => {
-  console.log("Calling Daily add page.");
- // res.sendFile(path.join(__dirname +'/../public/addDaily.html'));
- res.sendFile(path.join(__dirname +'/../public/Portfolio.html'));
- 
+    console.log("Calling Daily page");
+  // res.sendFile(path.join(__dirname +'/../public/Life.html'));
+    Daily.find((err, docs) => {
+      if(err)
+      {
+        console.log("ERROR HAPPENING IN READING ");
+      }
+      else{
+    //   res.json(docs);
+      res.render("daily/list", {
+        list:docs
+      })
+    }
+  });
+  
+
 });
 router.post('/daily_create', (req, res) => {
   console.log("Daily Life Create. ");
-  
+  insertRecord(req,res);
 })
 
-router.post('/', (req,res)=> {
-  console.log(req.body);
-  if(req.body._id == '')
-    insertRecord(req,res);
-    else
-    updateRecord(req,res);
-})
 
 function insertRecord(req, res){
-  var music = new Music();
-  music.musicTitle = req.body.musicTitle;
-  music.composer = req.body.composer;
-  music.date = req.body.date;
-  music.save((err, doc) => {
-    if(!err){
-      res.redirect('music/list');
+  var daily = new Daily();
+  daily.title = req.body.title;
+  daily.content = req.body.content;
+  daily.date = req.body.date;
+  daily.save((err, doc) => {
+   if(err) {
+     console.log("ERROR HAPPEN");
+     res.sendStatus(500);
+     return
+   }
+   else{
+     res.redirect('/home/life');
+     res.end();
+   }
+
+
+
+
+   /* if(!err){
+
+      res.redirect('daily');
     }else{
       if(err.name == 'ValidationError'){
-        handleValidationError(err, req.body);
-        res.render("music/addOrEdit", {
-          viewTitle: "Insert music",
-          music: req.body
-        })
-      }
+        res.redirect('/home/life');
+        res.end();
+      } 
       else{
         console.log('ERROR during record insertion : ' + err);
       }
-    }
+    }*/
   });
 }
-function updateRecord(req, res){
-  Music.findOneAndUpdate({_id: req.body._id}, req.body, {new : true}, (err, doc)=> {
-    if(!err){
-      res.redirect('music/list');
-    }
-    else{
-      if(err.name == 'ValidationError'){
-        handleValidationError(err, req.body);
-        res.render("music/addOrEdit",{
-          viewTitle: "Update MUSIC",
-          music: req.body
-        });
-      }
-      else{
-        console.log("Error happen for Updating :" + err);
-      }
-    }
-  });
 
-}
 router.get('/list' , (req,res) => {
   console.log("Get method for music")
   Music.find((err, docs) => {
@@ -77,6 +77,19 @@ router.get('/list' , (req,res) => {
     }
   });
 });
+
+router.get('/delete/:id', (req,res) =>{
+  Daily.findByIdAndRemove(req.params .id, (err, doc)=>{
+    if(!err){
+      console.log("REDIRECTING...");
+      res.redirect('/');
+    }
+    else{
+      console.log("Error for deleting :" + err);
+    }
+  });
+})
+
 function handleValidationError(err,body){
   for(field in err.errors)
   {

@@ -50,6 +50,7 @@ a {
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="/" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="/home/contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">About Me</a>
+    <a href="/home/Study" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Study</a>
     <a href="/home/PortFolio" class="w3-bar-item w3-button w3-padding-large w3-hide-small">Portfolio</a>
     <div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>
@@ -75,40 +76,37 @@ a {
   </div>
   <section class="w3-container w3-margin w3-black w3-round-xlarge">
       <h1>My Daily Life</h1>
-      <form action="/home/MyPersonal">
-        <input type="submit" value="Click here to see my record" />
-    </form>
-    <p style="font-size:22px;font-style: italic;">Currently developing process</p>
-      <form action="/daily_create" method="POST">
-          <input placeholder="Type 1"/>
-          <input placeholder="Type 2"/>
-          <input placeholder="Type 3"/>
-          <button>Submit</button>
-      </form>
+    <button class="w3-button w3-black w3-margin-bottom" onclick="document.getElementById('AddDaily').style.display='block'">Add Daily</button>
+    <button class="w3-button w3-black w3-margin-bottom" onclick="window.location.href = '/daily/';">Display Daily</button>
   </section>
 
-  <section class="w3-container w3-margin w3-black w3-round-xxlarge">
+  <section class="w3-container w3-margin w3-black w3-round-xxlarge">y
       <h1>My Future plan</h1>
       <p style="font-size:22px;font-style: italic;">Future functionality</p>
   </section>
-  <div id="ticketModal" class="w3-modal">
+
+  <div id="AddDaily" class="w3-modal">
     <div class="w3-modal-content w3-animate-top w3-card-4">
-      <header class="w3-container w3-teal w3-center w3-padding-32">
-        <span onclick="document.getElementById('ticketModal').style.display='none'"
-       class="w3-button w3-teal w3-xlarge w3-display-topright">×</span>
-        <h2 class="w3-wide"><i class="fa fa-suitcase w3-margin-right"></i>Tickets</h2>
+      <header class="w3-container w3-deep-purple w3-center w3-padding-20">
+        <span onclick="document.getElementById('AddDaily').style.display='none'"
+       class="w3-button w3-deep-purple w3-xlarge w3-display-topright">×</span>
+        <h2 class="w3-wide"><i class="fa fa-hand-peace-o w3-margin-right"></i>Add new Story</h2>
       </header>
       <div class="w3-container">
-        <p><label><i class="fa fa-shopping-cart"></i>sdlksaflksnlkds</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="How many?">
-        <p><label><i class="fa fa-user"></i> Send To</label></p>
-        <input class="w3-input w3-border" type="text" placeholder="Enter email">
-        <button class="w3-button w3-block w3-teal w3-padding-16 w3-section w3-right">PAY <i class="fa fa-check"></i></button>
-        <button class="w3-button w3-red w3-section" onclick="document.getElementById('ticketModal').style.display='none'">Close <i class="fa fa-remove"></i></button>
-        <p class="w3-right">Need <a href="#" class="w3-text-blue">help?</a></p>
+        <form action="/daily/daily_create" method="POST">
+          <p><label><i class="fa-hourglass"></i> Title</label></p>
+          <input class="w3-input w3-border" type="text" placeholder="" name="title">
+          <p><label><i class="fa fa-user"></i> Date</label></p>
+          <input class="w3-input w3-border" type="text" placeholder="" name="date">
+          <p><label><i class="fa fa-user"></i> Story</label></p>
+          <input rows = "5" class="w3-input w3-border" name="content"></input><br>
+          <!--Save to mongoDB database.-->
+          <button class="w3-button w3-block w3-deep-purple w3-padding-16 w3-section w3-right">Submit<i class="fa fa-check"></i></button>
+        </form>
       </div>
     </div>
-  </div>
+
+
 <footer class="content-footer">
     <ul class="social">
         <li><a class="css-is-deranged" href="https://github.com/hyunbin7303/">GitHub</a></li>
@@ -154,6 +152,8 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
 
 </script>
 
