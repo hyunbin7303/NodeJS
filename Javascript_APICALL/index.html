@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>League API Testing</title>
+
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <button id="getText">Input</button>
+<script>
+
+document.getElementById('getText').addEventListener('click', getText);
+function getText(){
+    fetch('sample.txt')
+    .then(function(res){
+        console.log(res.text());
+    })
+}
+
+</script>
+
+        <div class="weather-container">
+            <img class="icon">
+            <p class="weather"></p>
+            <p class="temp"></p>
+        </div>
+    
+    
+</body>
+</html>
